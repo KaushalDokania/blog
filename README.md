@@ -21,4 +21,4 @@ The Hugo theme which is currently active on this website is [hugo-theme-hello-fr
 
 The GitHub pages are served from [another repository](https://github.com/KaushalDokania/kaushaldokania.github.io) which has been added as a submodule to this repo in the `public` directory. `public` directory is where hugo generates the static HTML site with the `hugo` command.
 
-This is a test change.
+This is another test change.
