@@ -1,0 +1,26 @@
+disabled = false
+locale = "en"
+label = "English"
+weight = 1
+title = "Kaushal Dokania"
+
+[params]
+  displayName = "EN"
+  isoCode = "en"
+  rtl = false
+  dateFormat = "2 January 2006"
+  description = "Notes on software engineering, Go, cloud infrastructure and things I learn along the way"
+  copyright = "© 2020 Kaushal Dokania · [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/)"
+
+[params.author]
+  name = "Kaushal Dokania"
+  email = "kaushaldokania@gmail.com"
+  image = "img/kd.jpg"
+  headline = "Software Developer & Tech Enthusiast"
+  bio = "Building things and writing down what I learn — from daily work, side projects and general curiosity."
+  links = [
+    { github = "https://github.com/KaushalDokania" },
+    { linkedin = "https://www.linkedin.com/in/kaushal-dokania/" },
+    { stack-overflow = "https://stackoverflow.com/users/8338842/kaushal-dokania" },
+    { email = "mailto:kaushaldokania@gmail.com" },
+  ]

@@ -1,32 +1,25 @@
-## How to build and deploy
+## Writing and publishing
 
-1. For the repo `KaushalDokania/blog`
-    1. Add the new blog post or make any changes.
-    2. Run the server and test the changes
+```bash
+git clone --recurse-submodules git@github.com:KaushalDokania/blog.git   # or: git submodule update --init
+hugo new posts/my-post-title.md     # creates a draft in content/posts/
+hugo server -D                      # live preview at http://localhost:1313 (includes drafts)
+```
 
-        ```bash
-        hugo new posts/why-go-is-better-than-java?.md
-        hugo server -D
-        ```
+1. Write the post, then set `draft: false`, add `description` and `tags`.
+2. `git add . && git commit -m "Add post: <title>" && git push origin master`
 
-    3. Un-draft the new post when ready and test again
-    4. Commit the changes
+The `Deploy` workflow (`.github/workflows/deploy.yaml`) builds the site with Hugo and pushes the output to
+`KaushalDokania/kaushaldokania.github.io`, which GitHub Pages serves. Nothing else to do by hand.
 
-        **Note:** Make sure the `baseURL` in configuration is ***kaushaldokania.github.io*** 
+### One-time setup
 
-        ```bash
-        git add .
-        git commit -m "Adding new post - Why Go is better than Java?"
-        git push origin master
-        ```
+The workflow pushes with an SSH deploy key:
 
-2. For the repo `KaushalDokania/kaushaldokania.github.io`
-    1. Run `hugo` in the first repo to build and generate the static HTML site into the `public` directory
-    2. Go to `public` directory
-    3. Commit the changes
+1. `ssh-keygen -t ed25519 -N "" -f pages_deploy_key`
+2. Add `pages_deploy_key.pub` as a deploy key **with write access** on `kaushaldokania.github.io`.
+3. Add the private key as the secret `PAGES_DEPLOY_KEY` on `blog`, then delete both local key files.
 
-        ```bash
-        git add .
-        git commit -m "Rebuilding site"
-        git push origin master
-        ```
+### Local requirements
+
+Hugo extended v0.167.0 (`brew install hugo`). The theme is the `themes/hello-friend-ng` submodule.

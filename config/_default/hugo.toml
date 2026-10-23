@@ -1,0 +1,42 @@
+theme = "blowfish"
+baseURL = "https://kaushaldokania.github.io/"
+defaultContentLanguage = "en"
+
+enableRobotsTXT = true
+enableGitInfo = true
+enableEmoji = true
+summaryLength = 0
+buildDrafts = false
+buildFuture = false
+
+[pagination]
+  pagerSize = 10
+
+[imaging]
+  anchor = "Center"
+
+[permalinks]
+  posts = "/posts/:year/:month/:title/"
+
+[taxonomies]
+  tag = "tags"
+  category = "categories"
+  series = "series"
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
+[sitemap]
+  changefreq = "weekly"
+  filename = "sitemap.xml"
+  priority = 0.5
+
+[related]
+  threshold = 0
+  toLower = false
+  [[related.indices]]
+    name = "tags"
+    weight = 100
+  [[related.indices]]
+    name = "series"
+    weight = 50

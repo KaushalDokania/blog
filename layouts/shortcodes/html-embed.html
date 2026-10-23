@@ -1,0 +1,3 @@
+{{- $src := .Get "src" | default (.Get 0) -}}
+{{- $h := .Get "height" | default "480" -}}
+<iframe class="html-embed" src="{{ printf "/embeds/%s" $src | relURL }}" height="{{ $h }}" loading="lazy" sandbox="allow-scripts allow-same-origin" title="{{ .Get "title" | default $src }}"></iframe>
