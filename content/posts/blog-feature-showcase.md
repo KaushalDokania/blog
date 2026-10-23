@@ -10,12 +10,40 @@ tags: ["meta"]
 
 ## Diagram
 
+{{< fig title="From draft to live" subtitle="Publishing pipeline" caption="Every push to master builds the site and deploys it to GitHub Pages." >}}
 {{< mermaid >}}
 graph LR
   A[Write markdown] --> B[git push]
   B --> C[GitHub Actions: hugo build]
   C --> D[GitHub Pages]
 {{< /mermaid >}}
+{{< /fig >}}
+
+## Chart
+
+{{< fig title="Posts per year" subtitle="Illustrative data" caption="A Chart.js chart inside a figure card." >}}
+{{< chart >}}
+type: 'bar',
+data: {
+  labels: ['2020', '2026'],
+  datasets: [{ label: 'Posts', data: [2, 3], backgroundColor: ['#3b82f6', '#60a5fa'] }]
+},
+options: { plugins: { legend: { display: false } }, scales: { y: { beginAtZero: true, ticks: { stepSize: 1 } } } }
+{{< /chart >}}
+{{< /fig >}}
+
+## Pull quote
+
+{{< pullquote by="Example" >}}A council that agrees with everything is worse than no council.{{< /pullquote >}}
+
+## Table
+
+| Component | Shortcode |
+|-----------|-----------|
+| Figure card | `fig` |
+| Pull quote | `pullquote` |
+| Embedded page | `html-embed` |
+| Diagram | `mermaid` |
 
 ## Embedded HTML page
 

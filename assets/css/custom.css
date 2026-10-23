@@ -3,3 +3,69 @@ body { font-family: "Inter", system-ui, sans-serif; }
 .prose :is(h1, h2, h3, h4) { font-family: "Inter", system-ui, sans-serif; letter-spacing: -0.01em; }
 code, pre, kbd { font-family: "JetBrains Mono", ui-monospace, monospace; }
 .html-embed { width: 100%; border: 1px solid rgb(var(--color-neutral-300)); border-radius: 0.5rem; }
+
+/* Wider page: less side padding, wider article column and table of contents */
+.max-w-7xl { max-width: 76rem; }
+@media (min-width: 768px) { .md\:px-24 { padding-inline: 3rem; } }
+@media (min-width: 1024px) {
+  .lg\:px-32 { padding-inline: 3rem; }
+  .lg\:max-w-2xs { max-width: 18rem; }
+  .toc-right { min-width: 16rem; }
+  .toc-right a, .toc-right li { font-size: 0.95rem; line-height: 1.45; }
+}
+.max-w-prose { max-width: 46rem; }
+
+/* Warm paper background and warm greys (editorial look) */
+:root {
+  --color-neutral: 250, 249, 245;
+  --color-neutral-50: 247, 246, 241;
+  --color-neutral-100: 240, 238, 230;
+  --color-neutral-200: 227, 224, 213;
+  --color-neutral-300: 209, 207, 197;
+  --color-neutral-400: 176, 174, 165;
+  --color-neutral-500: 131, 130, 124;
+  --color-neutral-600: 94, 93, 89;
+  --color-neutral-700: 61, 61, 58;
+  --color-neutral-800: 38, 38, 36;
+  --color-neutral-900: 20, 20, 19;
+}
+
+/* Figure card: soft panel, inner card, centred title, small left-aligned caption */
+figure.fig { margin: 2.2rem 0; }
+.fig__panel {
+  background: rgba(var(--color-neutral-200), 0.8);
+  border-radius: 1rem;
+  padding: 1.1rem;
+}
+.dark .fig__panel { background: rgba(var(--color-neutral-700), 0.6); }
+.fig__card {
+  background: rgb(255 255 255 / 0.8);
+  border-radius: 0.75rem;
+  padding: 1.4rem 1.2rem;
+  overflow-x: auto;
+}
+.dark .fig__card { background: rgb(var(--color-neutral-800)); }
+.fig__title { text-align: center; font: 700 1.35rem/1.25 "Inter", system-ui, sans-serif; letter-spacing: -0.01em; }
+.fig__sub { text-align: center; font: 400 0.9rem/1.4 "Inter", system-ui, sans-serif; color: rgb(var(--color-neutral-500)); margin-top: 0.2rem; }
+.fig__body { margin-top: 1rem; display: flex; justify-content: center; }
+.fig__body > * { max-width: 100%; }
+.fig__cap { font: 400 0.85rem/1.5 "Inter", system-ui, sans-serif; color: rgb(var(--color-neutral-500)); margin-top: 0.7rem; }
+
+/* Plain images and Blowfish figures get the same soft rounding and caption style */
+.prose img { border-radius: 0.75rem; }
+.prose figcaption { font-family: "Inter", system-ui, sans-serif; font-size: 0.85rem; color: rgb(var(--color-neutral-500)); }
+
+/* Pull quote */
+blockquote.pullquote {
+  border: 0; border-top: 3px solid rgb(var(--color-primary-500)); border-radius: 0; background: none;
+  padding: 1rem 0 0; margin: 2.4rem 0; font-family: "Source Serif 4", Georgia, serif;
+  font-size: 1.5rem; line-height: 1.4; font-style: normal; font-weight: 600;
+}
+blockquote.pullquote p::before, blockquote.pullquote p::after { content: none; }
+blockquote.pullquote cite { display: block; margin-top: 0.6rem; font: 400 0.85rem "Inter", system-ui, sans-serif; color: rgb(var(--color-neutral-500)); font-style: normal; }
+
+/* Tables and inline code: calmer on the warm background */
+.prose table { border-radius: 0.5rem; }
+.prose :not(pre) > code { background: rgb(var(--color-neutral-100)); border-radius: 0.3rem; padding: 0.1em 0.35em; }
+.dark .prose :not(pre) > code { background: rgb(var(--color-neutral-700)); }
+.fig__body .mermaid svg { width: 100%; height: auto; max-width: 100%; }

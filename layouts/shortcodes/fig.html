@@ -1,0 +1,11 @@
+{{- /* Figure card: {{< fig title="" subtitle="" caption="" >}} diagram / chart / html {{< /fig >}} */ -}}
+<figure class="fig not-prose">
+  <div class="fig__panel">
+    <div class="fig__card">
+      {{- with .Get "title" }}<div class="fig__title">{{ . }}</div>{{ end }}
+      {{- with .Get "subtitle" }}<div class="fig__sub">{{ . }}</div>{{ end }}
+      <div class="fig__body">{{ .Inner }}</div>
+    </div>
+  </div>
+  {{- with .Get "caption" }}<figcaption class="fig__cap">{{ . }}</figcaption>{{ end }}
+</figure>
