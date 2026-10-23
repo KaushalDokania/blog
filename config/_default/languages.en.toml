@@ -9,6 +9,7 @@ title = "Kaushal Dokania"
   isoCode = "en"
   rtl = false
   dateFormat = "2 January 2006"
+  logo = "img/logo.svg"
   description = "Notes on software engineering, Go, cloud infrastructure and things I learn along the way"
   copyright = "© 2020 Kaushal Dokania · [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/)"
 
