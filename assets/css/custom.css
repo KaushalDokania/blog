@@ -69,3 +69,56 @@ blockquote.pullquote cite { display: block; margin-top: 0.6rem; font: 400 0.85re
 .prose :not(pre) > code { background: rgb(var(--color-neutral-100)); border-radius: 0.3rem; padding: 0.1em 0.35em; }
 .dark .prose :not(pre) > code { background: rgb(var(--color-neutral-700)); }
 .fig__body .mermaid svg { width: 100%; height: auto; max-width: 100%; }
+
+/* Motion demos ({{< motion >}} shortcode): tiles from the motion catalog */
+@keyframes a1{0%,10%{opacity:0;transform:translateY(22px)}30%,80%{opacity:1;transform:none}100%{opacity:0;transform:translateY(-10px)}}
+@keyframes a2{0%,10%{transform:scale(0)}25%{transform:scale(1.25)}35%,80%{transform:scale(1)}100%{transform:scale(0)}}
+@keyframes a3{0%,10%{stroke-dashoffset:200}50%,85%{stroke-dashoffset:0}100%{stroke-dashoffset:-200}}
+@keyframes a4{0%{offset-distance:0%}100%{offset-distance:100%}}
+@keyframes a5{0%{transform:scale(.3);opacity:.9}100%{transform:scale(2.6);opacity:0}}
+@keyframes a6{0%,10%{width:0}60%,90%{width:92px}100%{width:0}}
+@keyframes a8{0%,10%{transform:scaleY(0)}40%,85%{transform:scaleY(1)}100%{transform:scaleY(0)}}
+@keyframes a9{0%,40%{opacity:1}50%,90%{opacity:0}100%{opacity:1}}
+@keyframes a9b{0%,40%{opacity:0}50%,90%{opacity:1}100%{opacity:0}}
+@keyframes a10{0%,35%{transform:translateX(0)}50%,85%{transform:translateX(-50%)}100%{transform:translateX(0)}}
+@keyframes a11{0%,15%{border-radius:50%;transform:rotate(0)}50%,65%{border-radius:8px;transform:rotate(90deg)}100%{border-radius:50%;transform:rotate(0)}}
+@keyframes a12{0%,8%{opacity:0;transform:translateX(-14px)}22%,80%{opacity:1;transform:none}100%{opacity:0}}
+@keyframes a13{0%,15%{transform:scale(1)}55%,80%{transform:scale(2.2) translate(-8px,-4px)}100%{transform:scale(1)}}
+@keyframes a14{from{background-position:0 0}to{background-position:-60px 30px}}
+@keyframes a15{to{transform:rotate(360deg)}}
+@keyframes a16{0%,10%{background-size:0 100%}55%,90%{background-size:100% 100%}100%{background-size:0 100%}}
+@keyframes cur{50%{opacity:0}}
+@keyframes cur{50%{opacity:0}}
+.mg{--card:#f0eee6;--stage:#fff;--text:#1f1f1c;--text2:#5f5e5a;--line:#d3d1c7;--acc:#378add;--accbg:#e6f1fb;--accline:#85b7eb;--ok:#e1f5ee;--okline:#5dcaa5;--warn:#faeeda;--surface-1:var(--card);--surface-2:var(--stage);--bg-accent:var(--accbg);--border-accent:var(--accline);--fill-accent:var(--acc);--bg-success:var(--ok);--border-success:var(--okline);--fill-success:#1d9e75;--bg-warning:var(--warn);--border-warning:#ba7517;--fill-warning:#ba7517;--text-primary:var(--text);--text-secondary:var(--text2);--text-muted:#888780;--text-danger:#e24b4a;--text-success:#1d9e75;--border:var(--line);--border-strong:var(--line);margin:1.6rem 0;font-family:"Inter",system-ui,sans-serif;color:var(--text)}
+.dark .mg{--card:#2a2a28;--stage:#1b1b1a;--text:#ecebe6;--text2:#a5a49d;--line:#3a3a40;--acc:#6aa7ef;--accbg:#1d3552;--accline:#3f6fa8;--ok:#123a30;--okline:#2a8d70;--warn:#4a3512;}
+.mg .g{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px}
+.mg.mg--l .g{grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px}
+.mg .t{background:var(--card);border-radius:12px;padding:8px 8px 10px}
+.mg .s{height:76px;position:relative;overflow:hidden;border-radius:8px;background:var(--stage);border:.5px solid var(--line)}
+.mg .n{font-size:12px;color:var(--text2);margin:7px 2px 0;line-height:1.35}
+.mg .n b{font-weight:500;color:var(--text);display:block;font-size:13px}
+.mg .bx{position:absolute;width:34px;height:34px;border-radius:8px;background:var(--accbg);border:1px solid var(--accline)}
+.mg .c{left:calc(50% - 17px);top:21px}
+.mg .vx .s{height:auto}.mg .vx .s svg{display:block;width:100%;height:auto}
+.mg .vx .m{white-space:pre;font:12px ui-monospace,monospace;line-height:1.7;padding:10px 12px;height:150px}
+.mg .lb{font-size:11px;fill:var(--text2)}
+@media (prefers-reduced-motion:reduce){.mg *{animation-duration:0s!important}}
+
+/* Pipeline shortcode: snake-layout flow diagram in a figure card */
+.pipe { width: 100%; height: auto; display: block; color: rgb(var(--color-neutral-500)); }
+.pipe text { font-family: "Inter", system-ui, sans-serif; fill: rgb(var(--color-neutral-800)); }
+.dark .pipe text { fill: rgb(var(--color-neutral-100)); }
+.pipe .num { font-size: 13px; fill: rgb(var(--color-neutral-500)); }
+.dark .pipe .num { fill: rgb(var(--color-neutral-400)); }
+.pipe .lbl { font-size: 18px; font-weight: 500; }
+.pipe .cap { font-size: 15px; fill: rgb(var(--color-neutral-600)); }
+.dark .pipe .cap { fill: rgb(var(--color-neutral-300)); }
+.pipe .ln { fill: none; stroke: currentColor; stroke-width: 2; }
+.pipe .loop { stroke-dasharray: 5 5; }
+.pipe .p1, .pipe-key .p1 { fill: #e6f1fb; stroke: #85b7eb; } .pipe .p2, .pipe-key .p2 { fill: #faeeda; stroke: #d9a860; } .pipe .p3, .pipe-key .p3 { fill: #e1f5ee; stroke: #5dcaa5; }
+.dark .pipe .p1, .pipe-key .p1 { fill: #1d3552; stroke: #3f6fa8; } .dark .pipe .p2, .pipe-key .p2 { fill: #4a3512; stroke: #ba7517; } .dark .pipe .p3, .pipe-key .p3 { fill: #123a30; stroke: #2a8d70; }
+.pipe-key { display: flex; justify-content: center; gap: 1.2rem; flex-wrap: wrap; margin-top: 0.6rem; font: 400 0.85rem "Inter", system-ui, sans-serif; color: rgb(var(--color-neutral-600)); }
+.dark .pipe-key { color: rgb(var(--color-neutral-300)); }
+.pipe-key i { display: inline-block; width: 0.8rem; height: 0.8rem; border-radius: 0.2rem; margin-right: 0.4rem; vertical-align: -0.1rem; border: 1px solid; }
+.pipe-key .p1 { background: #e6f1fb; border-color: #85b7eb; } .pipe-key .p2 { background: #faeeda; border-color: #d9a860; } .pipe-key .p3 { background: #e1f5ee; border-color: #5dcaa5; }
+.dark .pipe-key .p1 { background: #1d3552; border-color: #3f6fa8; } .dark .pipe-key .p2 { background: #4a3512; border-color: #ba7517; } .dark .pipe-key .p3 { background: #123a30; border-color: #2a8d70; }

@@ -1,0 +1,9 @@
+{{- $d := hugo.Data.motion -}}
+<div class="mg{{ if .Get "large" }} mg--l{{ end }}"><div class="g">
+{{- range $n := split (.Get "demos") " " }}{{ with index $d $n }}
+<div class="t{{ if .js }} vx{{ end }}"{{ if .js }} data-m="{{ $n }}"{{ end }}>{{ .open | safeHTML }}{{ .inner | safeHTML }}</div><p class="n"><b>{{ .title }}</b>{{ .note }}</p></div>
+{{- else }}{{ errorf "motion: unknown demo %q" $n }}{{ end }}{{ end }}
+</div></div>
+{{- if not (.Page.Store.Get "motionjs") }}{{ .Page.Store.Set "motionjs" true }}
+<script src="{{ "js/motion.js" | relURL }}" defer></script>
+{{- end }}

@@ -1,0 +1,184 @@
+{
+ "fade": {
+  "open": "<div class=\"s\">",
+  "inner": "<div class=\"bx c\" style=\"animation:a1 3s ease-out infinite\"></div>",
+  "title": "Fade and slide in",
+  "note": "element rises into place",
+  "js": false
+ },
+ "pop": {
+  "open": "<div class=\"s\">",
+  "inner": "<div class=\"bx c\" style=\"animation:a2 3s cubic-bezier(.3,1.5,.5,1) infinite\"></div>",
+  "title": "Pop with overshoot",
+  "note": "scale past 1, settle",
+  "js": false
+ },
+ "pulse": {
+  "open": "<div class=\"s\">",
+  "inner": "<div style=\"position:absolute;left:calc(50% - 5px);top:33px;width:10px;height:10px;border-radius:50%;background:var(--acc)\"></div><div style=\"position:absolute;left:calc(50% - 5px);top:33px;width:10px;height:10px;border-radius:50%;border:1.5px solid var(--acc);animation:a5 1.6s ease-out infinite\"></div>",
+  "title": "Pulse ring",
+  "note": "draws the eye to a node",
+  "js": false
+ },
+ "highlight": {
+  "open": "<div class=\"s\">",
+  "inner": "<div style=\"position:absolute;left:12px;top:30px;height:18px;width:126px;background:linear-gradient(var(--warn),var(--warn)) no-repeat;background-size:0 100%;animation:a16 3s ease infinite;border-radius:3px\"></div><div style=\"position:absolute;left:14px;top:31px;font-size:12px\">key phrase here</div>",
+  "title": "Highlight sweep",
+  "note": "marks the key words",
+  "js": false
+ },
+ "draw": {
+  "open": "<div class=\"s\">",
+  "inner": "<svg viewBox=\"0 0 150 76\" width=\"100%\" height=\"76\"><path d=\"M12 56 C40 10 70 70 100 30 L138 20\" fill=\"none\" stroke=\"var(--acc)\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-dasharray=\"200\" style=\"animation:a3 3.4s ease-in-out infinite\"/></svg>",
+  "title": "Draw-on line",
+  "note": "stroke reveals a path",
+  "js": false
+ },
+ "token": {
+  "open": "<div class=\"s\">",
+  "inner": "<svg viewBox=\"0 0 150 76\" width=\"100%\" height=\"76\"><path d=\"M14 50 Q75 -10 136 50\" fill=\"none\" stroke=\"var(--line)\" stroke-dasharray=\"3 4\"/></svg><div style=\"position:absolute;left:0;top:0;width:10px;height:10px;border-radius:50%;background:var(--acc);offset-path:path('M14 50 Q75 -10 136 50');offset-rotate:0deg;animation:a4 2.4s ease-in-out infinite;margin:-5px\"></div>",
+  "title": "Token on a path",
+  "note": "data moving through a system",
+  "js": false
+ },
+ "loop": {
+  "open": "<div class=\"s\" style=\"display:flex;align-items:center;justify-content:center\">",
+  "inner": "<svg viewBox=\"0 0 60 60\" width=\"56\" height=\"56\"><g style=\"transform-origin:30px 30px;animation:a15 2.6s linear infinite\"><path d=\"M36.84 11.21 A20 20 0 1 1 14.68 17.14\" fill=\"none\" stroke=\"var(--acc)\" stroke-width=\"3\" stroke-linecap=\"round\"/><polygon points=\"17.9,13.3 17.35,23.26 8.15,15.54\" fill=\"var(--acc)\" stroke=\"var(--acc)\" stroke-width=\"1.5\" stroke-linejoin=\"round\"/></g></svg>",
+  "title": "Loop or cycle",
+  "note": "shows a repeating process",
+  "js": false
+ },
+ "stagger": {
+  "open": "<div class=\"s\">",
+  "inner": "<div style=\"position:absolute;left:14px;top:14px;width:70px;height:12px;border-radius:3px;background:var(--accbg);animation:a12 3.2s infinite\"></div><div style=\"position:absolute;left:14px;top:32px;width:100px;height:12px;border-radius:3px;background:var(--accbg);animation:a12 3.2s .25s infinite\"></div><div style=\"position:absolute;left:14px;top:50px;width:56px;height:12px;border-radius:3px;background:var(--accbg);animation:a12 3.2s .5s infinite\"></div>",
+  "title": "Stagger",
+  "note": "items arrive one after another",
+  "js": false
+ },
+ "type": {
+  "open": "<div class=\"s\">",
+  "inner": "<div style=\"position:absolute;left:12px;top:28px;height:20px;overflow:hidden;white-space:nowrap;font:500 13px ui-monospace,monospace;width:0;animation:a6 3.4s steps(14) infinite\">Hello, world<span style=\"color:var(--acc);animation:cur .6s infinite\">|</span></div>",
+  "title": "Typewriter",
+  "note": "text appears as spoken",
+  "js": false
+ },
+ "count": {
+  "open": "<div class=\"s\" style=\"display:flex;align-items:center;justify-content:center\">",
+  "inner": "<span id=\"cnt\" style=\"font-size:26px;font-weight:500\">0</span>",
+  "title": "Count-up number",
+  "note": "metrics that tick to value",
+  "js": true
+ },
+ "bars": {
+  "open": "<div class=\"s\">",
+  "inner": "<div style=\"position:absolute;bottom:8px;left:0;right:0;display:flex;gap:8px;justify-content:center;align-items:flex-end;height:58px\"><i style=\"width:16px;height:30px;background:var(--acc);transform-origin:bottom;animation:a8 3s ease-out infinite\"></i><i style=\"width:16px;height:48px;background:var(--acc);transform-origin:bottom;animation:a8 3s .15s ease-out infinite\"></i><i style=\"width:16px;height:22px;background:var(--acc);transform-origin:bottom;animation:a8 3s .3s ease-out infinite\"></i><i style=\"width:16px;height:40px;background:var(--acc);transform-origin:bottom;animation:a8 3s .45s ease-out infinite\"></i></div>",
+  "title": "Chart grow",
+  "note": "bars, lines and gauges animate in",
+  "js": false
+ },
+ "morph": {
+  "open": "<div class=\"s\">",
+  "inner": "<div class=\"bx c\" style=\"animation:a11 3s ease-in-out infinite\"></div>",
+  "title": "Morph",
+  "note": "one shape becomes another",
+  "js": false
+ },
+ "crossfade": {
+  "open": "<div class=\"s\">",
+  "inner": "<div style=\"position:absolute;inset:10px;border-radius:8px;background:var(--accbg);animation:a9 3s infinite\"></div><div style=\"position:absolute;inset:10px;border-radius:8px;background:var(--ok);animation:a9b 3s infinite\"></div>",
+  "title": "Crossfade",
+  "note": "soft scene-to-scene cut",
+  "js": false
+ },
+ "slide": {
+  "open": "<div class=\"s\">",
+  "inner": "<div style=\"position:absolute;inset:0;display:flex;width:200%;animation:a10 3.4s ease-in-out infinite\"><div style=\"width:50%;background:var(--accbg)\"></div><div style=\"width:50%;background:var(--ok)\"></div></div>",
+  "title": "Slide or wipe",
+  "note": "next scene pushes the last out",
+  "js": false
+ },
+ "push": {
+  "open": "<div class=\"s\">",
+  "inner": "<div style=\"position:absolute;inset:0;animation:a13 3.4s ease-in-out infinite;transform-origin:60% 40%\"><div class=\"bx\" style=\"left:30px;top:16px\"></div><div class=\"bx\" style=\"left:84px;top:30px;background:var(--ok);border-color:var(--okline)\"></div></div>",
+  "title": "Camera push",
+  "note": "zoom to focus, then pull back",
+  "js": false
+ },
+ "backdrop": {
+  "open": "<div class=\"s\" style=\"background-image:radial-gradient(var(--line) 1.2px,transparent 1.4px);background-size:15px 15px;animation:a14 5s linear infinite\">",
+  "inner": "",
+  "title": "Drifting backdrop",
+  "note": "dots or aurora for depth",
+  "js": false
+ },
+ "scene": {
+  "open": "<div class=\"s\">",
+  "inner": "<svg id=\"d1\" viewBox=\"0 0 300 150\"><rect width=\"300\" height=\"150\" style=\"fill:var(--bg-accent)\"/><g id=\"cl\" style=\"fill:var(--surface-2)\"><circle cx=\"0\" cy=\"10\" r=\"12\"/><circle cx=\"16\" cy=\"4\" r=\"15\"/><circle cx=\"34\" cy=\"10\" r=\"12\"/><rect x=\"-10\" y=\"10\" width=\"54\" height=\"12\" rx=\"6\"/></g><rect y=\"118\" width=\"300\" height=\"32\" style=\"fill:var(--surface-1)\"/><g style=\"fill:var(--text-secondary)\"><rect x=\"28\" y=\"58\" width=\"44\" height=\"62\" rx=\"4\"/></g><rect x=\"34\" y=\"66\" width=\"32\" height=\"10\" rx=\"2\" style=\"fill:var(--surface-2)\"/><rect x=\"34\" y=\"82\" width=\"32\" height=\"10\" rx=\"2\" style=\"fill:var(--surface-2)\"/><rect x=\"34\" y=\"98\" width=\"32\" height=\"10\" rx=\"2\" style=\"fill:var(--surface-2)\"/><circle id=\"l1\" cx=\"60\" cy=\"71\" r=\"2.5\"/><circle id=\"l2\" cx=\"60\" cy=\"87\" r=\"2.5\"/><circle id=\"l3\" cx=\"60\" cy=\"103\" r=\"2.5\"/><path id=\"gr\" style=\"fill:var(--fill-accent)\"/><g id=\"pk\"></g></svg>",
+  "title": "Illustrated scene, every part moves",
+  "note": "cloud drifts, LEDs blink, gear turns, packets travel",
+  "js": true
+ },
+ "shapes": {
+  "open": "<div class=\"s\">",
+  "inner": "<svg viewBox=\"0 0 300 150\"><polygon id=\"mp\" style=\"fill:var(--fill-accent)\"/><text id=\"mt\" x=\"150\" y=\"140\" text-anchor=\"middle\" class=\"lb\"></text></svg>",
+  "title": "Path morph",
+  "note": "circle, square, triangle and star share 24 points",
+  "js": true
+ },
+ "spotlight": {
+  "open": "<div class=\"s\">",
+  "inner": "<svg viewBox=\"0 0 300 150\"><defs><mask id=\"mk\"><rect width=\"300\" height=\"150\" fill=\"#fff\"/><circle id=\"mc\" r=\"34\" fill=\"#000\"/></mask></defs><g><rect x=\"20\" y=\"55\" width=\"70\" height=\"40\" rx=\"8\" style=\"fill:var(--bg-accent);stroke:var(--border-accent)\"/><text x=\"55\" y=\"79\" text-anchor=\"middle\" class=\"lb\">Client</text><rect x=\"115\" y=\"55\" width=\"70\" height=\"40\" rx=\"8\" style=\"fill:var(--bg-success);stroke:var(--border-success)\"/><text x=\"150\" y=\"79\" text-anchor=\"middle\" class=\"lb\">Model</text><rect x=\"210\" y=\"55\" width=\"70\" height=\"40\" rx=\"8\" style=\"fill:var(--bg-warning);stroke:var(--border-warning)\"/><text x=\"245\" y=\"79\" text-anchor=\"middle\" class=\"lb\">Result</text></g><rect width=\"300\" height=\"150\" mask=\"url(#mk)\" style=\"fill:var(--text-primary);opacity:.72\"/></svg>",
+  "title": "Spotlight by mask",
+  "note": "dim everything except the part being explained",
+  "js": true
+ },
+ "easing": {
+  "open": "<div class=\"s\">",
+  "inner": "<svg viewBox=\"0 0 300 150\"><g class=\"lb\"><text x=\"8\" y=\"30\">linear</text><text x=\"8\" y=\"75\">ease out</text><text x=\"8\" y=\"120\">spring</text></g><line x1=\"60\" x2=\"280\" y1=\"38\" y2=\"38\" style=\"stroke:var(--border)\"/><line x1=\"60\" x2=\"280\" y1=\"83\" y2=\"83\" style=\"stroke:var(--border)\"/><line x1=\"60\" x2=\"280\" y1=\"128\" y2=\"128\" style=\"stroke:var(--border)\"/><circle id=\"e1\" cy=\"38\" r=\"7\" style=\"fill:var(--text-secondary)\"/><circle id=\"e2\" cy=\"83\" r=\"7\" style=\"fill:var(--fill-accent)\"/><circle id=\"e3\" cy=\"128\" r=\"7\" style=\"fill:var(--fill-success)\"/></svg>",
+  "title": "Easing curves",
+  "note": "same move, three feelings: flat, smooth, bouncy",
+  "js": true
+ },
+ "parallax": {
+  "open": "<div class=\"s\">",
+  "inner": "<svg viewBox=\"0 0 300 150\"><rect width=\"300\" height=\"150\" style=\"fill:var(--bg-accent)\"/><g id=\"p1\"><path d=\"M-60 110 L20 60 L70 100 L130 40 L200 105 L260 55 L340 110 L340 150 L-60 150Z\" style=\"fill:var(--border-accent);opacity:.6\"/></g><g id=\"p2\"><path d=\"M-80 130 L0 85 L60 120 L130 75 L210 125 L280 90 L360 130 L360 150 L-80 150Z\" style=\"fill:var(--fill-accent);opacity:.7\"/></g><g id=\"p3\"><path d=\"M-100 150 L-100 138 L40 128 L120 140 L220 126 L330 140 L400 135 L400 150Z\" style=\"fill:var(--text-secondary)\"/></g></svg>",
+  "title": "Parallax camera pan",
+  "note": "far layers move less, near layers move more",
+  "js": true
+ },
+ "focus": {
+  "open": "<div class=\"s\">",
+  "inner": "<svg viewBox=\"0 0 300 150\"><defs><filter id=\"bl\"><feGaussianBlur id=\"bg\" stdDeviation=\"8\"/></filter></defs><g id=\"bf\" filter=\"url(#bl)\"><rect x=\"75\" y=\"40\" width=\"150\" height=\"70\" rx=\"12\" style=\"fill:var(--bg-success);stroke:var(--border-success)\"/><text x=\"150\" y=\"82\" text-anchor=\"middle\" style=\"font-size:16px;fill:var(--text-primary)\">Focus pull</text></g></svg>",
+  "title": "Blur-in focus pull",
+  "note": "SVG filter parameter animated per frame",
+  "js": true
+ },
+ "resort": {
+  "open": "<div class=\"s\">",
+  "inner": "<svg viewBox=\"0 0 300 150\" id=\"ls\"></svg>",
+  "title": "Animated re-sort",
+  "note": "rows glide to new positions, bars follow the values",
+  "js": true
+ },
+ "line": {
+  "open": "<div class=\"s\">",
+  "inner": "<svg viewBox=\"0 0 300 150\"><g style=\"stroke:var(--border)\"><line x1=\"30\" x2=\"285\" y1=\"120\" y2=\"120\"/><line x1=\"30\" x2=\"285\" y1=\"75\" y2=\"75\" stroke-dasharray=\"2 4\"/><line x1=\"30\" x2=\"285\" y1=\"30\" y2=\"30\" stroke-dasharray=\"2 4\"/></g><polyline id=\"lc\" pathLength=\"1\" fill=\"none\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" points=\"30,110 70,95 110,100 150,65 190,70 230,40 285,28\" stroke-dasharray=\"1\" style=\"stroke:var(--fill-accent)\"/><circle id=\"ld\" r=\"5\" style=\"fill:var(--fill-accent)\"/><text id=\"lv\" class=\"lb\" text-anchor=\"middle\"></text></svg>",
+  "title": "Line chart with live marker",
+  "note": "draw-on, a dot riding the line, a value readout",
+  "js": true
+ },
+ "code": {
+  "open": "<div class=\"s m\" id=\"cd\">",
+  "inner": "",
+  "title": "Code typing and diff",
+  "note": "type a line, strike the old one, reveal the fix",
+  "js": true
+ },
+ "follow": {
+  "open": "<div class=\"s\">",
+  "inner": "<svg viewBox=\"0 0 300 150\"><path id=\"fp\" d=\"M20 120 C70 20 120 140 170 70 S260 20 285 60\" fill=\"none\" stroke-dasharray=\"3 4\" style=\"stroke:var(--border-strong)\"/><g id=\"fa\"><polygon points=\"10,0 -8,-7 -4,0 -8,7\" style=\"fill:var(--fill-accent)\"/></g></svg>",
+  "title": "Follow a path and turn with it",
+  "note": "position and heading both read from the curve",
+  "js": true
+ }
+}
